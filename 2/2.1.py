@@ -20,12 +20,12 @@ def merge(left_part, right_part):
 def merge_sort(array_to_sort):
     """что то неправильно с рекурсией"""
     start_index = 0
-    end_index = len(array_to_sort) - 1
-    if end_index == 0:
-        return array_to_sort[start_index:]
+    end_index = len(array_to_sort)
+    if end_index == 1:
+        return array_to_sort[:1]
     middle_index = (len(array_to_sort) - start_index) // 2
     left_part = merge_sort(array_to_sort[start_index:middle_index])
-    right_part = merge_sort(array_to_sort[middle_index + 1:end_index])
+    right_part = merge_sort(array_to_sort[middle_index:end_index])
     sorted_array = merge(left_part, right_part)
 
     return sorted_array
