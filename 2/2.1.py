@@ -18,7 +18,6 @@ def merge(left_part, right_part):
 
 
 def merge_sort(array_to_sort):
-    """что то неправильно с рекурсией"""
     start_index = 0
     end_index = len(array_to_sort)
     if end_index == 1:
@@ -31,6 +30,6 @@ def merge_sort(array_to_sort):
     return sorted_array
 
 
-unsorted_array = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+unsorted_array = [15, 8, 7, 11, 5, 4, 22, 2, 43]
 result_array = merge_sort(unsorted_array)
 print(result_array)
